@@ -55,6 +55,7 @@ function runProgram(input) {
     spiralTraversal(arr, n);
   }
 }
+
 function spiralTraversal(arr, n) {
   let ansArray = [];
   for (let i = 0; i < n; i++) {

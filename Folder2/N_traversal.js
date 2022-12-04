@@ -6,9 +6,6 @@ Find the N traversal of the matrix.
 Refer the following figure for better understanding.
 
 
-image.png
-
-
 Input
 The first line contains T, the number of test cases. 
 The first line of each test case contains N, the size of the square matrix.
