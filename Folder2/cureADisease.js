@@ -49,8 +49,6 @@ function runProgram(input) {
 }
 
 function cureDisease(n, arr1, arr2) {
-  let max1 = -Infinity;
-  let max2 = -Infinity;
   let count = 0;
   for (let i = 0; i < n; i++) {
     if (arr1[i] > arr2[i]) {
