@@ -1,5 +1,5 @@
 /*
-
+.
 Problem Statement:
 You are given a number N.
 Let’s say you derive a variable x which is equal to the floor of a number you get when32is divided by N.
