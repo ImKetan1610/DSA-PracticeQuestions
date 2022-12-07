@@ -36,7 +36,6 @@ arr2 is 9 2 5
 
 function intersectionOfArray(N, arr1, arr2) {
   //write code here
-
   for (let a = 0; a < N; a++) {
     for (let i = 0; i < N; i++) {
       if (arr1[i] == arr2[a]) {

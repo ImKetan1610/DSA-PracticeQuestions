@@ -31,7 +31,7 @@ function identifyPrime(num) {
     if (num % i == 0) {
       count++;
     }
-  } //console.log(count);
+  }
   if (count == 2) {
     console.log("Yes");
   } else {

@@ -32,7 +32,6 @@ Sample Output:
 
 function arrayToStr(N, arr) {
   //write code here
-
   let bag = "";
   for (let i = 0; i < N; i++) {
     if (arr[i] < 0) {
