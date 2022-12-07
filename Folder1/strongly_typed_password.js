@@ -40,7 +40,7 @@ Therefore, the required output becomes weak strong strong weak
 */
 
 function strongPassword(N, arr) {
-  //     //write code herefo
+  //write code here
   let bag = "";
   for (let i = 0; i <= arr.length - 1; i++) {
     if (
