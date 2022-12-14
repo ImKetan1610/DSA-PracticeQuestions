@@ -5,7 +5,8 @@ You are given an array, stored in a variable with the name arr,
 whose size is stored in a variable with the name N
 You have to find the count of all the subarrays, the sum of whose elements is even
 
-For example, consider the value stored inN = 3, and arr = [1 2 3], then all the subarrays of the given array are
+For example, consider the value stored inN = 3, and arr = [1 2 3], 
+then all the subarrays of the given array are
 
 1
 1 2
