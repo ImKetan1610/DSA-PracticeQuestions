@@ -50,10 +50,10 @@ function sortArray(N, arr) {
   let last = 0;
   let count = 0;
   for (let i = 0; i <= N - 2; i++) {
-    let swip = 0;
+    let swap = 0;
     for (let j = 0; j <= N - i - 2; j++) {
       if (arr[j] > arr[j + 1]) {
-        swip = 1;
+        swap = 1;
         temp = arr[j];
         arr[j] = arr[j + 1];
         arr[j + 1] = temp;
@@ -62,7 +62,7 @@ function sortArray(N, arr) {
         last = arr[arr.length - 1];
       }
     }
-    if (swip == 0) {
+    if (swap == 0) {
       break;
     }
   }
