@@ -28,6 +28,7 @@ We print Yes as 1221 is a palindrome.
 
 */
 
+//Code 1
 function detectPalindrome(num) {
   //write code here
   num = num + "";
@@ -36,6 +37,24 @@ function detectPalindrome(num) {
     bag += num[i];
   }
   if (bag == num) {
+    console.log("Yes");
+  } else {
+    console.log("No");
+  }
+}
+
+//Code 2
+function detectPalindrome(num) {
+  //write code here
+  let rev = 0;
+  let save = num;
+
+  while (num) {
+    let rem = num % 10;
+    num = Math.floor(num / 10);
+    rev = rev * 10 + rem;
+  }
+  if (save == rev) {
     console.log("Yes");
   } else {
     console.log("No");
