@@ -48,49 +48,34 @@ Similarly for node 2, 3 and 4.
 
 */
 
-function LetsBuySomeHouses(N, mat) {
-  let i = 0,
-    j = 0;
-  let count = 0;
-  let bag = "";
-  while (i < N && j < N) {
-    //check here
-    if (mat[i][j] == 1) {
-      count++;
-      bag += j + 1 + " ";
+const check = (n, mat) => {
+  for (let i = 0; i < n; i++) {
+    let ans = "";
+    let c = 0;
+    for (let j = 0; j < n; j++) {
+      if (mat[i][j] == "1") {
+        ans += j + 1 + " ";
+        c++;
+      }
     }
-
-    if (j == N - 1) {
-      console.log(count + " " + bag);
-      count = 0;
-      bag = "";
-      j = -1;
-      i++;
-    }
-    j++;
+    console.log(c + " " + ans);
   }
-  //   console.log(mat);
-}
+};
 
 function runProgram(input) {
-  // Write Code Here
-
   input = input.trim().split("\n");
-  let tc = +input[0].trim();
-  let line = 1; // line represents index here
+  let tc = +input[0];
+  let l = 1;
   for (let i = 0; i < tc; i++) {
-    let N = +input[line].trim();
-    line++;
+    let n = +input[l++];
     let mat = [];
-    for (j = 0; j < N; j++) {
-      let arr = input[line].trim().split(" ").map(Number);
-      line++;
+    for (let j = 0; j < n; j++) {
+      let arr = input[l++].split(" ");
       mat.push(arr);
     }
-    LetsBuySomeHouses(N, mat);
+    check(n, mat);
   }
 }
-
 if (process.env.USERNAME === "") {
   runProgram(``);
 } else {
