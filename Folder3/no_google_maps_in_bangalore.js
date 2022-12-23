@@ -46,51 +46,38 @@ NO
 
 */
 
-function LetsBuySomeHouses(N, M, mat1, Q, mat2) {
-  let arr = [];
-  for (let i = 0; i < M; i++) {
-    arr.push(mat1[i][0] + "-" + mat1[i][1]);
-  }
-
-  for (let j = 0; j < Q; j++) {
-    let flag = "NO";
-    for (let i = 0; i < N; i++) {
-      if (
-        mat2[j][0] + "-" + mat2[j][1] == arr[i] ||
-        mat2[j][1] + "-" + mat2[j][0] == arr[i]
-      )
-        flag = "YES";
-    }
-    console.log(flag);
-  }
-}
-
 function runProgram(input) {
-  // Write Code Here
-
   input = input.trim().split("\n");
-  let [N, M] = input[0].trim().split(" ").map(Number);
+  var [a, b] = input[0].split(" ").map(Number);
+  var x = [];
+  var y = [];
+  var l = 1;
 
-  let line = 1;
+  for (var i = 0; i < b; i++) {
+    let [a, b] = input[l++].trim().split(" ").map(Number);
+    x.push(a);
+    y.push(b);
+  }
 
-  let mat1 = [];
-  let mat2 = [];
-  for (j = 0; j < M; j++) {
-    let arr = input[line].trim().split(" ").map(Number);
-    line++;
-    mat1.push(arr);
+  var q = input[l++];
+
+  for (var a = 0; a < q; a++) {
+    var [i, j] = input[l++].trim().split(" ").map(Number);
+    var ans = noGoogleMaps(a, b, x, y, i, j);
+    console.log(ans);
   }
-  let Q = +input[line];
-  line++;
-  for (j = 0; j < Q; j++) {
-    let arr = input[line].trim().split(" ").map(Number);
-    line++;
-    mat2.push(arr);
-  }
-  LetsBuySomeHouses(N, M, mat1, Q, mat2);
 }
 
-if (process.env.USERNAME === "") {
+function noGoogleMaps(a, b, x, y, i, j) {
+  for (var a = 0; a < b; a++) {
+    if (x[a] == i && y[a] === j) {
+      return "YES";
+    }
+  }
+  return "NO";
+}
+
+if (process.env.USER === "") {
   runProgram(``);
 } else {
   process.stdin.resume();
