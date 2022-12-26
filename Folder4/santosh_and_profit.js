@@ -32,46 +32,44 @@ Sample Output:
 
 */
 
-function santoshAndProfit(n,a){
-    if(n===0){
-        return 1;
-    }
-    else if(n<0){
-        return 0;
-    }else if(n===150){
-        return 0;
-    }
-    else{
-        return santoshAndProfit(n-4)+santoshAndProfit(n-8);
-    }
+function santoshAndProfit(n, a) {
+  if (n === 0) {
+    return 1;
+  } else if (n < 0) {
+    return 0;
+  } else if (n === 150) {
+    return 0;
+  } else {
+    return santoshAndProfit(n - 4) + santoshAndProfit(n - 8);
+  }
 }
-function runProgram(read)
-{
-    read=read.trim().split("\n");
-    let tc=+read[0];
-    for(let i=1;i<=tc;i++){
-        let n=+read[i];
-        console.log(santoshAndProfit(n,1));
-    }
+
+function runProgram(read) {
+  read = read.trim().split("\n");
+  let tc = +read[0];
+  for (let i = 1; i <= tc; i++) {
+    let n = +read[i];
+    console.log(santoshAndProfit(n, 1));
+  }
 }
 
 if (process.env.USERNAME === "") {
-     runProgram(``);
- } else {
-     process.stdin.resume();
-     process.stdin.setEncoding("ascii");
-     let read = "";
-     process.stdin.on("data", function (input) {
-         read += input;
-     });
-     process.stdin.on("end", function () {
-         read = read.replace(/\n$/, "");
-         read = read.replace(/\n$/, "");
-         runProgram(read);
-     });
-     process.on("SIGINT", function () {
-         read = read.replace(/\n$/, "");
-         runProgram(read);
-         process.exit(0);
-     });
- }
+  runProgram(``);
+} else {
+  process.stdin.resume();
+  process.stdin.setEncoding("ascii");
+  let read = "";
+  process.stdin.on("data", function (input) {
+    read += input;
+  });
+  process.stdin.on("end", function () {
+    read = read.replace(/\n$/, "");
+    read = read.replace(/\n$/, "");
+    runProgram(read);
+  });
+  process.on("SIGINT", function () {
+    read = read.replace(/\n$/, "");
+    runProgram(read);
+    process.exit(0);
+  });
+}
