@@ -48,6 +48,7 @@ function runProgram(input) {
   let n = +input;
   console.log(bob(n));
 }
+
 if (process.env.USER === "") {
   runProgram(``);
 } else {
