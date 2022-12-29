@@ -77,6 +77,7 @@ function runprogram(input) {
   for (let i = 0; i < tc; i++) {
     let N = +input[line++];
     let arr = input[line++].split(" ").map(Number);
+
     Richard(N, arr);
   }
 }
