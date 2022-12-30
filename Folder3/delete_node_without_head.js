@@ -37,7 +37,7 @@ const LinkedListNode = class {
     this.next = null;
   }
 };
-// Complete the function below
+
 function deleteNode(node) {
   if (node.next) {
     node.data = node.next.data;
